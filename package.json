@@ -1,5 +1,6 @@
 {
   "name": "fee-cafe",
+  "homepage": "http://jonathanchancey.github.io/fee-cafe",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build",
     "test": "react-scripts test",
