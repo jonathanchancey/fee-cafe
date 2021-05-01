@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/fee-cafe/static/css/main.2083df4e.chunk.css",
+    "main.js": "/fee-cafe/static/js/main.84a28b7b.chunk.js",
+    "main.js.map": "/fee-cafe/static/js/main.84a28b7b.chunk.js.map",
+    "runtime-main.js": "/fee-cafe/static/js/runtime-main.8c950315.js",
+    "runtime-main.js.map": "/fee-cafe/static/js/runtime-main.8c950315.js.map",
+    "static/js/2.a9e6aaad.chunk.js": "/fee-cafe/static/js/2.a9e6aaad.chunk.js",
+    "static/js/2.a9e6aaad.chunk.js.map": "/fee-cafe/static/js/2.a9e6aaad.chunk.js.map",
+    "index.html": "/fee-cafe/index.html",
+    "static/css/main.2083df4e.chunk.css.map": "/fee-cafe/static/css/main.2083df4e.chunk.css.map",
+    "static/js/2.a9e6aaad.chunk.js.LICENSE.txt": "/fee-cafe/static/js/2.a9e6aaad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c950315.js",
+    "static/js/2.a9e6aaad.chunk.js",
+    "static/css/main.2083df4e.chunk.css",
+    "static/js/main.84a28b7b.chunk.js"
+  ]
+}
