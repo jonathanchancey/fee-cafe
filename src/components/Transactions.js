@@ -21,7 +21,7 @@ export class Transactions extends Component {
 
     // executed when the component is first mounted and will only execute once during the component's lifetime
     async componentDidMount() { 
-        console.log("entering componentDidMount")
+        // console.log("entering componentDidMount")
         let address = -1
         try {
             const provider = await detectEthereumProvider();
@@ -34,7 +34,7 @@ export class Transactions extends Component {
                 // Will open the MetaMask UI
                 // You should disable this button while the request is pending!
                 const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                console.log(accounts)
+                // console.log(accounts)
                 
                 address = accounts[0]
                 
@@ -44,7 +44,7 @@ export class Transactions extends Component {
             } else {
                 console.log('Please install MetaMask!');
             }
-            console.log(process.env)
+            // console.log(process.env)
         } catch (err) {
             console.log("Could not load metamask")
         }
@@ -120,7 +120,7 @@ export class Transactions extends Component {
         // destructure the state property
         const { transactions, errorMsg, info} = this.state
 
-        console.log(this.state)
+        // console.log(this.state)
 
         // console.log(info["bnbPrice"])
 
