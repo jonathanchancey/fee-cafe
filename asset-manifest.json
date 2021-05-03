@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fee-cafe/static/css/main.241d4c57.chunk.css",
-    "main.js": "/fee-cafe/static/js/main.cb9fe651.chunk.js",
-    "main.js.map": "/fee-cafe/static/js/main.cb9fe651.chunk.js.map",
+    "main.js": "/fee-cafe/static/js/main.8f56dfcb.chunk.js",
+    "main.js.map": "/fee-cafe/static/js/main.8f56dfcb.chunk.js.map",
     "runtime-main.js": "/fee-cafe/static/js/runtime-main.8c950315.js",
     "runtime-main.js.map": "/fee-cafe/static/js/runtime-main.8c950315.js.map",
     "static/js/2.a9e6aaad.chunk.js": "/fee-cafe/static/js/2.a9e6aaad.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.8c950315.js",
     "static/js/2.a9e6aaad.chunk.js",
     "static/css/main.241d4c57.chunk.css",
-    "static/js/main.cb9fe651.chunk.js"
+    "static/js/main.8f56dfcb.chunk.js"
   ]
 }
