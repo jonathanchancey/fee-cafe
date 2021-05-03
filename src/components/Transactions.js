@@ -61,7 +61,15 @@ export class Transactions extends Component {
         .then(response => {
             // console.log(response.data.result);
             transactions = response.data.result
+            
+            const transactionsSent = transactions.filter(txn => txn.from === address.toLowerCase())
+            // const transactionsSent = transactions => transactions.from 
+            // console.log(transactionsSent)
+
             this.setState({transactions: transactions})
+
+            // console.log("transactions")
+            // console.log(transactions)
 
             const gasPrice = transactions.map(transactions => parseInt(transactions.gasPrice))
             const gasPriceTotal = gasPrice.reduce((a, b) => parseInt(a) + parseInt(b), 0)
@@ -78,6 +86,8 @@ export class Transactions extends Component {
             const meanGasPrice = parseInt(mean(gasPrice)/1e9)
 
             // prepares dict with user-presenting values
+
+            info["transactionsSent"] = transactionsSent.length
             info["gasPrice"] = gasPrice
             info["gasUsed"] = gasPriceTotal
             info["gasPriceTotal"] = gasUsed
@@ -100,7 +110,7 @@ export class Transactions extends Component {
         })
         .catch(error => {
             console.log(error);
-            this.setState({errorMsg: 'Error retrieving data'})
+            this.setState({errorMsg: 'Error retrieving data. Have you installed Metamask?'})
         });
       }
 
@@ -123,7 +133,7 @@ export class Transactions extends Component {
                     <span className="Transactions-value"> ${Number((info["bnbPrice"]*(info["totalTransactionsFees"]/1e18))).toLocaleString()}</span>
                     <br/>
                     <br/>
-                    You've used <span className="Transactions-value">{Number(info["gasUsedTotal"]).toLocaleString()}</span> gas to send <span className="Transactions-value">{transactions.length ? Number(transactions.length).toLocaleString() : "NAN"}</span> transactions, with an average price of <span className="Transactions-value">{Number(info["meanGasPrice"]).toLocaleString()}</span> gwei.
+                    You've used <span className="Transactions-value">{Number(info["gasUsedTotal"]).toLocaleString()}</span> gas to send <span className="Transactions-value">{Number(info["transactionsSent"])}</span> transactions, with an average price of <span className="Transactions-value">{Number(info["meanGasPrice"]).toLocaleString()}</span> gwei.
                     <br/>
                     <p className="Transactions-tips">Consider a tip :D | 0x33F3a9845AF04022c3A9576494089a74c78d150c</p>
                     {/* NAN of them failed, costing you NAN. */}
